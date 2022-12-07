@@ -137,22 +137,32 @@
         function pop_Empreses_3(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2"><strong>Empresa</strong><br />' + (feature.properties['Empresa'] !== null ? autolinker.link(feature.properties['Empresa'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Empresa</th>\
+                        <td>' + (feature.properties['Empresa'] !== null ? autolinker.link(feature.properties['Empresa'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Nom Comerc'] !== null ? autolinker.link(feature.properties['Nom Comerc'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nom Comerc</th>\
+                        <td>' + (feature.properties['Nom Comerc'] !== null ? autolinker.link(feature.properties['Nom Comerc'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Telefon'] !== null ? autolinker.link(feature.properties['Telefon'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Telefon</th>\
+                        <td>' + (feature.properties['Telefon'] !== null ? autolinker.link(feature.properties['Telefon'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['E-mail'] !== null ? autolinker.link(feature.properties['E-mail'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">E-mail</th>\
+                        <td>' + (feature.properties['E-mail'] !== null ? autolinker.link(feature.properties['E-mail'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Web'] !== null ? autolinker.link(feature.properties['Web'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Web</th>\
+                        <td>' + (feature.properties['Web'] !== null ? autolinker.link(feature.properties['Web'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['ADREÇA'] !== null ? autolinker.link(feature.properties['ADREÇA'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">ADREÇA</th>\
+                        <td>' + (feature.properties['ADREÇA'] !== null ? autolinker.link(feature.properties['ADREÇA'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Municipi</th>\
+                        <td>' + (feature.properties['Municipi'] !== null ? autolinker.link(feature.properties['Municipi'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
